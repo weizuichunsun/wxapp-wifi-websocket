@@ -9,7 +9,7 @@ export class websocket {
 
     this.chain_callback = null;   // 用于解决路由之间，A页面，B页面都调用了sendMessage 方法后，A页面触发跳转到B页面，B页面sendMessage后，在A页面监听到了。
     
-    this.senior = false; // 高级权限，考虑到路由的原因，并且外部调用不修改权限，导致死循环，这里再做一层防护
+  
 
 
   }
@@ -17,7 +17,6 @@ export class websocket {
    * device 传入设备的信息
    * device.url 连接 websocket的地址
    * device.hiddenLoading 是否屏蔽发送的状态
-   * device.senior 高级权限
    */
   sendMessage(device, data, callback) {
     var self = this;
@@ -48,7 +47,7 @@ export class websocket {
       }
     }
     self.chain_callback = callback;  // 用于处理路由的错误函数回调
-    self.senior = device.senior ? true : false;
+  
     
 
 
@@ -86,10 +85,8 @@ export class websocket {
           self.chain_callback(JSON.parse(res.data), function (content) {
             console.log("websocket content=>", content);
 
-            if (self.senior) {
-              self.senior = false;
-              self.sendSocketMessage(content);
-            }
+              // self.sendSocketMessage(content);
+            
           });
         }
       });
