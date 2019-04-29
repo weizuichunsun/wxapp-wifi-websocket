@@ -1,0 +1,19 @@
+.intro {
+  margin: 30px;
+  text-align: center;
+}
+.g-hd{
+  padding: 10px;
+  color: #e64340;
+  font-size: 30rpx;
+}
+.g-bd{
+  padding: 10px;
+}
+button{
+  margin: 10px 0;
+}
+
+input{
+  border: solid thin #353535;
+}
