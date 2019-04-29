@@ -11,5 +11,6 @@
 
 ![image](https://github.com/weizuichunsun/wxapp-wifi-websocket/blob/master/images/%E6%95%88%E6%9E%9C%E5%9B%BE.png?raw=true)
 
-
+代码引入片段
+https://developers.weixin.qq.com/s/nZa78Zmu7k7R
 
