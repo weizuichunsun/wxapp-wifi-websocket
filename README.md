@@ -1,0 +1,2 @@
+# wxapp-wifi-websocket
+微信小程序连接wifi热点接口和建立局域网websocket传输数据通讯
